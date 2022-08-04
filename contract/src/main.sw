@@ -6,7 +6,7 @@ abi Pisya {
 }
 
 storage {
-bank: u64 = 0,
+bank: u64 = 1,
 }
 
 impl Pisya for Contract {
