@@ -33,7 +33,7 @@ async fn can_increment() {
         .await
         .unwrap();
 
-    assert_eq!(2, result.value);
+    assert_eq!(1, result.value);
     // Now you have an instance of your contract you can use to test each function
 }
 
@@ -41,6 +41,13 @@ async fn can_increment() {
 async fn can_decrement() {
     let (instance, _id) = get_contract_instance().await;
 
+    let result =  instance
+        .initialize_bank(1)
+        .call()
+        .await
+        .unwrap();
+
+    assert_eq!(1, result.value);
     let result =  instance
         .decrement_bank()
         .call()
