@@ -1,18 +1,18 @@
 use fuels::{prelude::*, tx::ContractId};
 
 // Load abi from json
-abigen!(MyContract, "/home/admin/counter/contract/out/debug/Pisya-abi.json");
+abigen!(MyContract, "./out/debug/Pisya-abi.json");
 
-async fn get_contract_instance() -> (Contract, ContractId) {
+async fn get_contract_instance() -> (MyContract, ContractId) {
     // Launch a local network and deploy the contract
     let wallet = launch_provider_and_get_wallet().await;
 
-    let id = MyContract::deploy(
-        "/home/admin/counter/contract/out/debug/Pisya.bin",
+    let id = Contract::deploy(
+        "./out/debug/Pisya.bin",
         &wallet,
         TxParameters::default(),
         StorageConfiguration::with_storage_path(Some(
-            "/home/admin/counter/contract/out/debug/Pisya-storage_slots.json".to_string(),
+            "./out/debug/Pisya-storage_slots.json".to_string(),
         )),
     )   
     .await
