@@ -2,8 +2,9 @@ contract;
 
 abi Pisya {
     #[storage(write)]fn initialize_bank(value: u64) -> u64;
-    #[storage(read, write)]fn increment_bank() -> u64;
-    #[storage(read, write)]fn decrement_bank() -> u64;
+    #[storage(read, write)]fn increment_bank(param: u64) -> u64;
+    #[storage(read, write)]fn decrement_bank(param: u64) -> u64;
+    #[storage(read)]fn counter() -> u64;
 }
 
 storage {
@@ -17,14 +18,18 @@ impl Pisya for Contract {
         value
     } 
 
-    #[storage(read, write)]fn increment_bank() -> u64{
-        storage.bank = storage.bank + 1;
+    #[storage(read, write)]fn increment_bank(param: u64) -> u64 {
+        storage.bank += param;
         storage.bank
-    } 
+  }
 
-    #[storage(read, write)]fn decrement_bank() -> u64{
-        storage.bank = storage.bank - 1;
+    #[storage(read, write)]fn decrement_bank(param: u64) -> u64{
+        storage.bank -= param;
         storage.bank
     }
+
+    #[storage(read)]fn counter() -> u64 {
+        storage.bank
+  }
 
 }
