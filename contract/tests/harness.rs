@@ -57,3 +57,24 @@ async fn can_decrement() {
     assert_eq!(0, result.value);
     // Now you have an instance of your contract you can use to test each function
 }
+
+#[tokio::test]
+async fn can_counter() {
+    let (instance, _id) = get_contract_instance().await;
+
+    let result =  instance
+        .initialize_bank(10)
+        .call()
+        .await
+        .unwrap();
+
+    assert_eq!(1, result.value);
+    let result =  instance
+        .counter()
+        .call()
+        .await
+        .unwrap();
+
+    assert_eq!(10, result.value);
+    // Now you have an instance of your contract you can use to test each function
+}
