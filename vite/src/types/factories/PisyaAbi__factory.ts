@@ -7,58 +7,71 @@ import { Interface, Contract } from "fuels";
 import type { PisyaAbi, PisyaAbiInterface } from "../PisyaAbi";
 const _abi = [
   {
-    type: "function",
-    inputs: [],
-    name: "counter",
-    outputs: [
+    "type": "function",
+    "inputs": [
       {
-        name: "",
-        type: "u64",
-        components: null,
-        typeArguments: null,
-      },
+        "name": "value",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
     ],
+    "name": "initialize_bank",
+    "outputs": [
+      {
+        "name": "",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ]
   },
   {
-    type: "function",
-    inputs: [
+    "type": "function",
+    "inputs": [],
+    "name": "increment_bank",
+    "outputs": [
       {
-        name: "param",
-        type: "u64",
-        components: null,
-        typeArguments: null,
-      },
-    ],
-    name: "increment_bank",
-    outputs: [
-      {
-        name: "",
-        type: "u64",
-        components: null,
-        typeArguments: null,
-      },
-    ],
+        "name": "",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ]
   },
   {
-    type: "function",
-    inputs: [
+    "type": "function",
+    "inputs": [
       {
-        name: "param",
-        type: "u64",
-        components: null,
-        typeArguments: null,
-      },
+        "name": "param",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
     ],
-    name: "decrement_bank",
-    outputs: [
+    "name": "decrement_bank",
+    "outputs": [
       {
-        name: "",
-        type: "u64",
-        components: null,
-        typeArguments: null,
-      },
-    ],
+        "name": "",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ]
   },
+  {
+    "type": "function",
+    "inputs": [],
+    "name": "counter",
+    "outputs": [
+      {
+        "name": "",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ]
+  }
 ];
 
 export class PisyaAbi__factory {

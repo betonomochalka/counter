@@ -1,8 +1,15 @@
 [
   {
     "type": "function",
-    "inputs": [],
-    "name": "counter",
+    "inputs": [
+      {
+        "name": "value",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ],
+    "name": "initialize_bank",
     "outputs": [
       {
         "name": "",
@@ -14,14 +21,7 @@
   },
   {
     "type": "function",
-    "inputs": [
-      {
-        "name": "param",
-        "type": "u64",
-        "components": null,
-        "typeArguments": null
-      }
-    ],
+    "inputs": [],
     "name": "increment_bank",
     "outputs": [
       {
@@ -43,6 +43,19 @@
       }
     ],
     "name": "decrement_bank",
+    "outputs": [
+      {
+        "name": "",
+        "type": "u64",
+        "components": null,
+        "typeArguments": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "inputs": [],
+    "name": "counter",
     "outputs": [
       {
         "name": "",

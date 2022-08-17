@@ -7,9 +7,6 @@ export default defineConfig({
     target: 'es2020'
   },
   plugins: [react()],
-  esbuild: {
-    logOverride: { 'this-is-undefined-in-esm': 'silent' }
-  },
   optimizeDeps: {
     esbuildOptions:
      {target: 'es2020'}
