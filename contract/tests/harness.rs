@@ -68,7 +68,7 @@ async fn can_counter() {
         .await
         .unwrap();
 
-    assert_eq!(1, result.value);
+    assert_eq!(10, result.value);
     let result =  instance
         .counter()
         .call()
