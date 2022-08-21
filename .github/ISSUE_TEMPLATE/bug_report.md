@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Something is wrong with fuels-ts.
+description: Something is wrong with the project.
 labels:
   - "bug"
 body:
