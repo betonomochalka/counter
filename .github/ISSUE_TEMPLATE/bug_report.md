@@ -1,38 +1,45 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: 🐛 Bug Report
+description: Something is wrong with fuels-ts.
+labels:
+  - "bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping to improve our Typescript SDK!
 
----
+        ## The best bug report is a failing test!
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+        The fastest way to get a bug fixed is to add a failing test and send a pull request. **It's usually easy to do with our bug report test template**.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+        1. Click the "Fork" button
+        2. Open our contributions guideline!
+        3. Follow the instructions!
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+        ## I'd rather just report the bug
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+        That's fine too! Go ahead and fill out this form.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+  - type: input
+    attributes:
+      label: What version of fuels-ts are you using?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: A concise description of what you're experiencing.
+    validations:
+      required: true
