@@ -63,14 +63,14 @@ async fn can_decrement() {
 async fn can_get_bank() {
     let (instance, _id) = get_contract_instance().await;
 
-    let result =  instance
+    let result = instance
         .increment_bank()
         .call()
         .await
         .unwrap();
 
     assert_eq!(1, result.value);
-    let result =  instance
+    let result = instance
         .get_bank()
         .call()
         .await
